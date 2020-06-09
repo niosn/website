@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <title>网址大全</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="referrer" content="always">
+    <meta name="description" content="网址大全 -- 简单可依赖的上网导航">
+    <style>
+
+        body {
+            position: relative
+        }
+
+        body, form {
+            margin: 0 !important;
+            padding: 0 !important
+        }
+
+        #bd_snap {
+            font: 13px arial;
+            color: #000;
+            background: #fff;
+            text-align: left;
+            padding: 13px 0 0 20px
+        }
+
+        #bd_snap_txt {
+            clear: both;
+            padding: 10px 0 2px;
+            line-height: 24px;
+            color: #333
+        }
+
+        #bd_snap_note {
+            color: #999;
+            padding-bottom: 10px
+        }
+
+        #bd_snap a {
+            font: 13px arial;
+            color: #00c;
+            text-decoration: underline
+        }
+
+        #bd_snap_note a {
+            color: #999
+        }
+
+        #bd_snap_head {
+            width: 860px;
+            height: 44px
+        }
+
+        #bd_snap_logo {
+            width: 162px;
+            height: 38px;
+            display: block;
+            background: url(http://www.baidu.com/img/logo-snap.png) no-repeat;
+            margin-right: 15px;
+            float: left
+        }
+
+        #bd_snap_search {
+            width: 680px;
+            position: absolute;
+            left: 209px;
+            top: 17px
+        }
+
+        #bd_snap_kw {
+            width: 531px;
+            margin-right: 0;
+            height: 24px;
+            padding: 4px 7px;
+            padding: 6px 7px 2px\9;
+            font: 16px arial;
+            vertical-align: top;
+            border: 1px solid #b6b6b6;
+            border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+            background: #fff;
+            display: inline-block;
+            border-right-width: 0;
+            border-color: #b8b8b8 transparent #ccc #b8b8b8;
+            overflow: hidden;
+            outline: 0
+        }
+
+            #bd_snap_kw:hover {
+                border-color: #999 transparent #b3b3b3 #999;
+            }
+
+            #bd_snap_kw:focus {
+                border-color: #4791ff transparent #4791ff #4791ff
+            }
+
+        #bd_snap_su {
+            width: 100px;
+            height: 34px;
+            font-size: 14px;
+            color: #fff;
+            padding: 0;
+            letter-spacing: 1px;
+            background: #3385ff;
+            border-bottom: 1px solid #2d78f4;
+            outline: medium;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            cursor: pointer;
+            border: 0
+        }
+
+        #bd_snap_search input.bd_snap_btn_h {
+            background: #3075dc;
+            box-shadow: inset 1px 1px 3px #2964bb;
+            -webkit-box-shadow: inset 1px 1px 3px #2964bb;
+            -moz-box-shadow: inset 1px 1px 3px #2964bb;
+            -o-box-shadow: inset 1px 1px 3px #2964bb;
+        }
+
+        #bd_snap_search input.btnhover {
+            background: #317ef3;
+            border-bottom: 1px solid #2868c8;
+            box-shadow: 1px 1px 1px #ccc;
+        }
+
+        #bd_snap_btn_wr {
+            width: 97px;
+            height: 34px;
+            display: inline-block;
+            _top: 1px;
+            *position: relative
+        }
+
+        #bd_snap_ln {
+            height: 1px;
+            border-top: 1px solid #ACA899;
+            background: #ECE9D8;
+            overflow: hidden
+        }
+
+        #bd_snap_txt span a {
+            text-decoration: none
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="./res/1.css">
+    <link rel="stylesheet" type="text/css" href="./res/2.css">
+</head>
+<body style="">
+    <div id="header" class="clearfix">
+        <a class="fl logo" monkey="search-baidulogo-sitebd" onclick="javascript:;" href="javascript:;">
+            <img width="137" height="46" alt="" src="./res/logo.6456fa5.gif">
+        </a>
+        <div class="header-main">
+            <div class="clearfix">
+                <div class="fl fl-hack search-box" monkey="search-sitebd">
+                    <div class="search-tab">
+                        <a class="cur" target="_blank" data-tab="web" href="https://www.baidu.com/">网页</a>
+                        <a target="_blank" data-tab="news" href="http://news.baidu.com/">新闻</a>
+                        <a target="_blank" data-tab="tieba" href="http://tieba.baidu.com/">贴吧</a>
+                        <a target="_blank" data-tab="zhidao" href="http://zhidao.baidu.com/">知道</a>
+                        <a target="_blank" data-tab="music" href="http://music.baidu.com/">音乐</a>
+                        <a target="_blank" data-tab="image" href="http://image.baidu.com/">图片</a>
+                        <a target="_blank" data-tab="video" href="http://video.baidu.com/">视频</a>
+                        <a target="_blank" data-tab="map" href="http://map.baidu.com/">地图</a>
+                        <a target="_blank" data-tab="wenku" href="http://wenku.baidu.com/">文库</a>
+                        <a target="_blank" href="http://www.baidu.com/more/" class="more">更多&gt;&gt;</a>
+                    </div>
+                    <div class="search-form">
+                        <form class="clearfix" id="searchForm" target="_blank" method="get" action="http://www.baidu.com/s">
+                            <div class="fl pstr">
+                                <input name="word" maxlength="100" id="word" autocomplete="off" class="search-input">
+                            </div>
+                            <div class="fl search-btn-wrap"><input type="submit" class="search-btn" value="百度一下"></div>
+                            <input type="hidden" value="50000041_hao_pg" name="tn" id="tn"><input type="hidden" value="utf-8" name="ie">
+                        </form>
+                    </div>
+                </div>
+                <div class="hot-words ovh" monkey="search-notice-sitebd">
+                    <div class="slider">
+                        <span class="dot"></span>
+                        <a href="javascript:;" class="next" data-slider="controller-next"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="http://192.168.0.94:3000/" class="to-old clr-blue">系统一览</a>
+    </div>
+    <div class="content">
+        <div class="clearfix content-top page-width">
+            <div class="sidebar fl fl-hack">
+                <div class="real everybody mod mt10" monkey="allsearch-sitebd">
+                    <div class="hd">
+                        <h3 class="hd-title">搜索推荐</h3>
+                    </div>
+                    <ul class="bd clearfix" data-hooks="search-rem">
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="real" class="real mod mt10">
+                    <div class="hd pstr">
+                        <h3 class="hd-title">
+                            <a target="_blank" href="http://www.hao123.com/top" class="clr-blue">实时热搜</a>
+                        </h3>
+                    </div>
+                    <ul class="bd clearfix">
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="搜索推荐">搜索推荐</a>
+                        </li>
+                        <li class="fl search">
+                            &#8226;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?wd=" title="2020年全国两会">2020年全国两会</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main ovh">
+                <div class="sites mod mt10" monkey="mingzhan-sitebd">
+                    <ul class="clearfix">
+                        <li class="fl site">
+                            <a target="_blank" class="clr-black" href="https://www.baidu.com/">百度</a>&nbsp;&#8226;&nbsp;
+                            <a target="_blank" class="clr-black" href="http://tieba.baidu.com/">贴吧</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="clr-black" href="http://www.sina.com.cn/">新浪</a>&nbsp;&#8226;&nbsp;
+                            <a target="_blank" class="clr-black" href="http://weibo.com/">微博</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="clr-black" href="http://www.sohu.com/">搜狐</a>&nbsp;&#8226;&nbsp;
+                            <a target="_blank" class="clr-black" href="http://tv.sohu.com/?txid=658bdd0690e7730d6b360a936c4e3234">视频</a>
+                        </li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.qq.com/">腾　讯</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.ifeng.com/">凤 凰 网</a></li>
+                        <li class="fl site">
+                            <a target="_blank" class="clr-black" href="http://www.163.com/">网易</a>&nbsp;&#8226;&nbsp;
+                            <a target="_blank" class="clr-black" href="http://mail.163.com/">163邮箱</a>
+                        </li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.jd.com/">京东商城</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.tmall.com/">天猫商城</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.suning.com/">苏宁易购</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://mos.m.taobao.com/">聚 划 算</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.taobao.com/">淘 宝 网</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.eastmoney.com/">东方财富</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://jump.luna.58.com/">58 同 城</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.ctrip.com/">携程旅行</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://s.click.taobao.com/">爱 淘 宝</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.booking.com/">Booking酒店</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://s.click.taobao.com/">天猫超市</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.iqiyi.com/">爱 奇 艺</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.tianya.cn/">天涯社区</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://fanyi.baidu.com/">百度翻译</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.hao123.com/tejia">今日特卖</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.12306.cn/">12306</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="https://www.douyu.com/">斗鱼TV</a></li>
+                        <li class="fl site"><a target="_blank" class="clr-black" href="http://www.bilibili.com/">哔哩哔哩</a></li>
+                    </ul>
+                </div>
+
+                <div class="tools mod clearfix mt10" monkey="tool-sitebd">
+                    <h3 class="title fl fl-hack">实用工具</h3>
+                    <ul class="bd clearfix ovh">
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/weather160303.png)" href="http://tianqi.hao123.com/">天气预报</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/ditu160303.png)" href="http://map.baidu.com/">网上地图</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/flight160303.png)" href="http://www.12306.cn/">火车票</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+                            <a target="_blank" class="clr-blue" href="http://lvyou.hao123.com/air">机票</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/waihui160303.png)" href="http://www.boc.cn/sourcedb/whpj/">外汇牌价</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/gupiao160303.png)" href="http://www.hao123.com/stocknew">股票</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+                            <a target="_blank" class="clr-blue" href="http://www.hao123.com/licai">理财</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/wannianli160303.png)" href="http://www.hao123.com/rili">万年历</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/xingzuo160303.png)" href="http://www.hao123.com/xingzuonew.html">星座运程</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/kuaidi160303.png)" href="http://life.hao123.com/">实用查询</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/fanyi160303.png)" href="https://www.hao123.com/haoxue">学习 </a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+                            <a target="_blank" class="clr-blue" href="http://www.hao123.com/exam">考试</a>
+                        </li>
+                        <li class="fl site">
+                            <a target="_blank" class="icon clr-blue" style="background-image:url(http://s0.hao123img.com/res/img/caipiao160303.png)" href="http://caipiao.hao123.com/">彩票</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+                            <a target="_blank" class="clr-blue" href="https://www.baidu.com/s?word=%E5%8F%8C%E8%89%B2%E7%90%83&amp;tn=50000103_hao_pg&amp;ie=utf-8">双色球</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cools mod clearfix mt10" monkey="kuzhan-sitebd">
+                    <div class="group clearfix first-group">
+                        <div>
+                            <span class="fl">
+                                <a target="_blank" class="clr-blue" href="http://v.hao123.baidu.com/">视 频</a>
+                            </span>
+                            <span class="more">
+                                <a target="_blank" class="clr-blue" href="http://v.hao123.baidu.com/">更多&gt;&gt;</a>
+                            </span>
+                            <span class="site">
+                                <a target="_blank" class="icon clr-black" href="http://www.iqiyi.com/">爱奇艺高清</a>
+                            </span>
+                            <span class="site">
+                                <a target="_blank" class="icon clr-black" href="http://www.youku.com/">优酷网</a>
+                            </span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.baidu.com/">百度视频</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.qq.com/">腾讯视频</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mgtv.com/">芒果TV</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://tv.sohu.com/">搜狐视频</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://v.hao123.baidu.com/">影 视</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://v.hao123.baidu.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.hao123.baidu.com/dianshi">电视剧</a></span>
+                            <span class="site">
+                                <a target="_blank" class="icon clr-black" href="http://v.hao123.baidu.com/dianying/">电影</a>&nbsp;&#8226;&nbsp;
+                                <a target="_blank" class="clr-black" href="http://life.hao123.com/?tn=kuzhan_movie&amp;searchTab=dianying">购票</a>
+                            </span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.hao123.baidu.com/dongman/">动漫</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.hao123.baidu.com/zongyi/">综艺</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://live.hao123.com/">电视直播</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="">院线大片</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://game.hao123.com/">游 戏</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://game.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.7k7k.com/">7k7k游戏</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.17173.com/">17173</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://xyx.hao123.com/">免费小游戏</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.37.com/">37游戏</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://game.hao123.com/">hao123游戏</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.gamersky.com/">游民星空</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://tuijian.hao123.com/">新 闻</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://tuijian.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://news.sina.com.cn/">新浪新闻</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.qq.com/">腾讯新闻</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://news.baidu.com/">百度新闻</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://news.sohu.com/">搜狐新闻</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.cankaoxiaoxi.com/">参考消息</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.huanqiu.com/">环球网</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="https://tuijian.hao123.com/">看 点</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="https://tuijian.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://military.china.com/zh_cn/">中华军事</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.miercn.com/">米尔军事</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.tiexue.net/">铁血军事</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mil.huanqiu.com/">环球军事</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://news.ifeng.com/mil/">凤凰军事</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mil.news.sina.com.cn/">新浪军事</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/sports">体 育</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/sports">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://sports.sina.com.cn/">新浪</a>&nbsp;&#8226;&nbsp;<a target="_blank" class="clr-black" href="https://www.baidu.com/s?word=NBA&amp;tn=50000014_hao_pg&amp;ie=utf-8">NBA</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://sports.sohu.com/">搜狐体育</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://sports.cntv.cn/">CCTV5</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.hupu.com/">虎扑体育</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.zhibo8.cc/">直播吧</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://sports.163.com/">网易体育</a></span>
+                        </div>
+                    </div>
+                    <div class="group clearfix">
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="https://s.click.taobao.com/Er74zKw">购 物</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="https://s.click.taobao.com/Er74zKw">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.taobao.com/">淘宝网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.suning.com/?utm_source=hao123&amp;utm_medium=kuzhan">苏宁易购</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://mos.m.taobao.com/">聚划算</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://s.click.taobao.com/s3vPj9w">今日特价</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://you.163.com/">网易严选</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://2.taobao.com/">闲鱼</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="https://s.click.taobao.com/hi9Rj9w">商 城</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="https://s.click.taobao.com/hi9Rj9w">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://s.click.taobao.com/NTtvLKw">天猫</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.dangdang.com/">当当网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.yhd.com/">1号店</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://s.click.taobao.com/ZxHPj9w">爱淘宝</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mogujie.com/">蘑菇街</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.smzdm.com/">什么值得买</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://go.hao123.com/?tn=kuzhan1">旅 游</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://go.hao123.com/?tn=kuzhan1">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.ctrip.com/">携程网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://go.hao123.com/sales">特价旅游</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.booking.com/index.zh-cn.html?aid=1310341">Booking酒店</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.tuniu.com/">途牛</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://go.hao123.com/flight?tn=kuzhan1">机票</a>&nbsp;&#8226;&nbsp;
+                                <a target="_blank" class="clr-black" href="http://go.hao123.com/train?tn=kuzhan1">火车票</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mafengwo.cn/">马蜂窝</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://book.hao123.com/">小 说</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://book.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.qidian.com/">起点中文</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="xs,y" alog-custom="ind:xs,sal:1" href="https://b.faloo.com/">飞卢小说  </a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.xxsy.net/">潇湘书院</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://book.hao123.com/rank.html">小说排行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://book.hao123.com/store/c0/w0/s0/p1/all.html">热门小说</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.readnovel.com/">小说阅读</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://shouji.hao123.com/?tn=kuzhan1">手 机</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://shouji.hao123.com/?tn=kuzhan1">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.10086.cn/">移动</a>&nbsp;&#8226;&nbsp;
+                                <a target="_blank" class="clr-black" href="http://www.10010.com/">联通</a>&nbsp;&#8226;&nbsp;
+                                <a target="_blank" class="clr-black" href="https://www.baidu.com/link?url=AZvluWbTjZjpaT5lnIpkB-gTIdyX_nZdtoLX_pkbM5i&amp;wd=&amp;eqid=8b09c549000038e7000000035930ca9a">电信</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.zol.com.cn/">中关村在线</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.ithome.com/">IT之家</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.zealer.com/">zealer测评</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mi.com/">小米官网</a></span>
+                        </div>
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/shequ">社 交</a></span>
+                            <span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/shequ">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.baidu.com/s?word=%E8%B4%B4%E5%90%A7&amp;tn=50000014_hao_pg&amp;ie=utf-8">百度贴吧</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.tianya.cn/">天涯社区</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.zhenai.com/">珍爱网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.zhihu.com/">知乎</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mop.com/">猫扑</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://qzone.qq.com/">QQ空间</a></span>
+                        </div>
+                    </div><div class="group clearfix">
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/video/live">直 播</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/video/live">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.douyu.com/">斗鱼TV</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/video/live">美女秀场</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.showself.com/">秀色直播</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://egame.qq.com/">企鹅电竞</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.huya.com/">虎牙直播</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.yy.com/">YY直播</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue js_hint" href="http://life.hao123.com/?tn=kuzhan">生 活</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://life.hao123.com/?tn=kuzhan">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.ganji.com/">赶集网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.baixing.com/">百姓网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.fang.com/">房天下</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.lianjia.com/">链家网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.xiaozhu.com/">小猪短租</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.dianping.com/">大众点评</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://soft.hao123.com/">软 件</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://soft.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://soft.hao123.com/">软件中心</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.onlinedown.net/">华军软件园</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://shouji.baidu.com/">手机助手</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.skycn.com/">天空软件站</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.mydrivers.com/">快科技</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/zhaopin">招 聘</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/zhaopin">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://cnt.zhaopin.com/Market/whole_counter.jsp?sid=121114603&amp;site=hao123&amp;url=http://landing.zhaopin.com/register?utm_source=hao123&amp;utm_medium=cpt&amp;utm_term=001&amp;utm_content=daohang&amp;utm_campaign=hao123">智联招聘</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.51job.com/">前程无忧</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.liepin.com/">猎聘</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.yingjiesheng.com/">应届生求职</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.chinahr.com/">中华英才</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.lagou.com/">拉勾</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/auto">汽 车</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/auto">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.pcauto.com.cn/">太平洋汽车</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.bitauto.com/">易车网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/auto">汽车大全</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://auto.sina.com.cn/">新浪汽车</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://che.hao123.com/?tn=kuzhan">精选二手车</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.jxedt.com/">驾校一点通</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://wyyx.hao123.com/">页 游</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://wyyx.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.baidu.com/s?word=%E7%A5%9E%E4%BB%99%E5%8A%AB&amp;tn=50000185_hao_pg&amp;ie=utf-8">神仙劫</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://game.hao123.com/base/detail?gid=788">灭神</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://game.hao123.com/base/detail?gid=687">九天封神</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://game.hao123.com/base/detail?gid=569">梁山传奇</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://game.hao123.com/base/detail?gid=646">传奇世界</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://game.hao123.com/base/detail?gid=695">魔域永恒</a></span>
+                        </div>
+                    </div><div class="group clearfix">
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://game.hao123.com/wangyou">网 游</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://game.hao123.com/wangyou">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://game.hao123.com/base/detail?gid=712">冒险岛2</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.baidu.com/s?word=%E8%8D%92%E9%87%8E%E8%A1%8C%E5%8A%A8&amp;tn=50000155_hao_pg&amp;ie=utf-8">荒野行动</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/zt/wow1">魔兽世界</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/zt/mhxy">梦幻西游</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/zt/wuxia">天涯明月刀</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/zt/lol1">英雄联盟</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://video.hao123.baidu.com/dongman/">动 漫</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://video.hao123.baidu.com/dongman/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/video/shaoer">少儿动画</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://moe.hao123.com/">萌主页</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/manhua">漫画大全</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.acfun.cn/">AcFun弹幕</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.bilibili.com/">哔哩哔哩</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://v.baidu.com/v?word=%E6%B5%B7%E8%B4%BC%E7%8E%8B&amp;ie=utf-8&amp;fr=video">海贼王</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://music.hao123.com/">音 乐</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://music.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://music.taihe.com/?fr=hao123">千千音乐</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://www.kugou.com/">酷狗音乐</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://music.163.com/">网易云音乐</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://y.qq.com/">QQ音乐</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://music.hao123.com/tag/%E7%BB%8F%E5%85%B8%E8%80%81%E6%AD%8C">经典老歌</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" cls="yy,n" alog-custom="ind:yy,sal:0" href="http://fm.taihe.com/?fr=hao123">随心听</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/licai">金 融</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/licai">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/stocknew#danmu">股票</a>&nbsp;&#8226;&nbsp;<a target="_blank" class="clr-black" href="http://www.hao123.com/licai">理财赚钱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/licaishuju">理财大数据</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.10jqka.com.cn/">同花顺</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://8.baidu.com/">百度理财</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.yicai.com/">第一财经</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/stocknew">财 经</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/stocknew">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.eastmoney.com/">东方财富</a>&nbsp;&#8226;&nbsp;<a target="_blank" class="clr-black" href="http://guba.eastmoney.com/">股吧</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://finance.sina.com.cn/">新浪财经</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.stockstar.com/">证券之星</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.cnfol.com/">中金在线</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://finance.ifeng.com/">凤凰财经</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.jrj.com.cn/">金融界</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/mail">邮 箱</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/mail">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.163.com/">163邮箱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.126.com/">126邮箱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.aliyun.com/">阿里邮箱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.sina.com.cn/">新浪邮箱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.qq.com/">QQ邮箱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://mail.10086.cn/">139手机邮箱</a></span>
+                        </div>
+                    </div><div class="group clearfix">
+                        <div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://lady.hao123.com/?tn=kzdl">女 性</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://lady.hao123.com/?tn=kzdl">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://s.click.taobao.com/mYSMj9w">天猫女装</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.rayli.com.cn/">瑞丽女性</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://pic.hao123.com/">漂亮女人</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.xiaohongshu.com/">小红书</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://ent.sina.com.cn/">娱乐八卦</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://lady.163.com/">网易女人</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://caipiao.hao123.com/">彩 票</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://caipiao.hao123.com/">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.zhcw.com/">中彩网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.lottery.gov.cn/">中国体彩</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://caipiao.hao123.com/">全国开奖</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://lottery.sina.com.cn/">新浪彩票</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.sporttery.cn/">竞彩网</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.cwl.gov.cn/">中国福彩网</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/bank">银 行</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/bank">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.icbc.com.cn/">工商银行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.ccb.com/">建设银行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.abchina.com/">农业银行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.boc.cn/">中国银行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.bankcomm.com/">交通银行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.cmbchina.com/">招商银行</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://www.hao123.com/sitemap">酷 站</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://www.hao123.com/sitemap">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.hao123.com/zxfy">在线翻译</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.qiushibaike.com/">糗事百科</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://www.xiachufang.com/">下厨房</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.tianyancha.com/">天眼查</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="https://www.haodf.com/">好大夫</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://study.163.com/">网易云课堂</a></span>
+                        </div><div>
+                            <span class="fl"><a target="_blank" class="clr-blue" href="http://life.hao123.com/info/?tn=kuzhan">实 用</a></span><span class="more"><a target="_blank" class="clr-blue" href="http://life.hao123.com/info/?tn=kuzhan">更多&gt;&gt;</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/?tn=kuzhan">生活特惠</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/menu/?tn=kuzhan">美食菜谱</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/health/?tn=kuzhan">健康养生</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/shfw/?tn=kuzhan">本地生活</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/jtcx/?tn=kuzhan">交通出行</a></span>
+                            <span class="site"><a target="_blank" class="icon clr-black" href="http://life.hao123.com/jyxx/?tn=kuzhan">教育学习</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer page-width">
+        <div class="fl">
+            <a target="_blank" href="">雨晴烟晚</a>
+            <a target="_blank" href="http://top.baidu.com/">绿水新池满</a>
+            <a target="_blank" href="">双燕飞来垂柳院</a>
+            <a target="_blank" href="">小阁画帘高卷</a>
+        </div>
+        <a name="baidusnap2">黄昏独倚朱阑</a>
+        <a name="baidusnap2">西南新月眉弯</a>
+        <b style="color:black;">雨晴烟晚</b>
+        <a target="_blank" href="">砌下落花风起</a>
+        <a target="_blank" href="" class="last">罗衣特地春寒</a>
+    </div>
+</body>
+</html>
