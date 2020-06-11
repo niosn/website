@@ -9,6 +9,7 @@
   <meta name="description" content="网址大全 -- 简单可依赖的上网导航">
   <link rel="stylesheet" type="text/css" href="./res/1.css">
   <link rel="stylesheet" type="text/css" href="./res/2.css">
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body style="">
 <div id="header" class="clearfix">
@@ -32,8 +33,8 @@
         </div>
         <div class="search-form">
           <form class="clearfix" id="searchForm" target="_blank" method="get" action="http://www.baidu.com/s">
-            <div class="fl pstr">
-              <input name="word" maxlength="100" id="word" autocomplete="off" class="search-input">
+            <div class="fl pstr"><input name="word" maxlength="100" id="word" autocomplete="off" class="search-input">
+              <div id="sug" style="display: none;"></div>
             </div>
             <div class="fl search-btn-wrap"><input type="submit" class="search-btn" value="百度一下"></div>
             <input type="hidden" value="50000041_hao_pg" name="tn" id="tn"><input type="hidden" value="utf-8" name="ie">
@@ -628,5 +629,60 @@
   <a target="_blank" href="">砌下落花风起</a>
   <a target="_blank" href="" class="last">罗衣特地春寒</a>
 </div>
+<script>
+  $(function () {
+    var blurFlag = true;
+    $('#word').bind('input propertychange', function () {
+      var keyword = $(this).val();
+      var url = 'http://www.baidu.com/sugrec?prod=pc_hao123&pre=1&p=3&ie=utf-8&json=1&from=pc_hao123';
+      url += '&wd=' + encodeURIComponent(keyword)
+      url += '&_=' + new Date().getTime();
+      $.ajax({
+        type: "get",
+        url: url,
+        dataType: 'jsonp',
+        jsonp: 'callback',//键
+        success: function(data){
+          if (!data.g) {
+            $("#sug").css('display','none');
+            return
+          }
+          var html = '<ul>';
+          data.g.forEach(item => {
+            html += '<li data-sug-index="0">' + item.q + '</li>'
+          })
+          html += '</ul>';
+          $('#sug').data('key', keyword)
+          $('#sug').prop('innerHTML', html);
+          $("#sug").css('display','block');
+          $("#sug li").mouseover(function(){
+            blurFlag = false
+            $(this).prop("class","cur");
+          });
+          $("#sug li").mouseout(function(){
+            blurFlag = true
+            $(this).prop("class","#");
+          });
+          $("#sug li").click(function(){
+            $('#sug').data('key', this.innerText)
+            $('#word').val(this.innerText);
+            $("#sug").css('display','none');
+            $('#searchForm').submit();
+          });
+        }
+      });
+    });
+    $('#word').focus(function() {
+      var keyword = $(this).val();
+      if (keyword == $('#sug').data('key')) {
+        $("#sug").css('display','block');
+      }
+    });
+    $('#word').blur(function() {
+      if (!blurFlag) return
+      $("#sug").css('display','none');
+    });
+  });
+</script>
 </body>
 </html>
