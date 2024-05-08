@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/website',
+  publicPath: '/website/dist',
   outputDir: process.env.VUE_APP_OUTPUTDIR,
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
