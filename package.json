@@ -1,34 +1,31 @@
 {
-  "name": "vue-site",
-  "version": "0.1.0",
+  "name": "vue-project",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve --mode dev",
-    "build": "vue-cli-service build --mode prod"
+    "dev": "nvm use 20 && vite",
+    "build": "nvm use 20 && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write src/"
   },
   "dependencies": {
-    "async-validator": "^3.0.1",
-    "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "clipboard": "^2.0.4",
-    "core-js": "^2.6.5",
-    "crypto-js": "^3.1.9-1",
-    "js-cookie": "^2.2.1",
+    "axios": "^1.10.0",
     "jsonp": "^0.2.1",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.7"
+    "pinia": "^3.0.3",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.9.0",
-    "babel-eslint": "10.0.1",
-    "babel-plugin-import": "^1.12.0",
-    "compression-webpack-plugin": "^3.0.1",
-    "eslint": "5.15.3",
-    "eslint-plugin-vue": "5.2.3",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vitejs/plugin-vue": "5.2.3",
+    "@vitejs/plugin-vue-jsx": "4.1.2",
+    "fast-glob": "^3.3.3",
+    "sass": "1.89.2",
+    "unplugin-auto-import": "19.2.0",
+    "unplugin-vue-setup-extend-plus": "1.0.1",
+    "vite": "6.3.5",
+    "vite-plugin-compression": "0.5.1",
+    "vite-plugin-javascript-obfuscator": "3.1.0",
+    "vite-plugin-svg-icons": "2.0.1"
   }
 }
