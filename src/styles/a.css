@@ -44,7 +44,6 @@
 
 .pstr {
     position: relative;
-    _zoom: 1
 }
 
 .hide {
@@ -124,7 +123,6 @@ a:hover {
 
 .g_hot, .g_icon_hot, .g_icon_v {
     position: relative;
-    _zoom: 1;
     padding-right: 16px
 }
 
@@ -304,7 +302,6 @@ a:hover {
 }
 
 .hot-searches {
-    *zoom: 1;
     overflow: hidden;
     margin: 11px 0 0 152px;
     width: 580px;
@@ -573,7 +570,6 @@ a:hover {
     display: inline-block;
     height: 18px;
     line-height: 18px;
-    *zoom: 1
 }
 
 .tools .icon {

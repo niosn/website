@@ -31,8 +31,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 audio, canvas, video {
     display: inline-block;
-    *display: inline;
-    *zoom: 1
 }
 
 ol, ul, menu {
@@ -112,7 +110,6 @@ button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus, labe
 }
 
 .clearfix {
-    zoom: 1
 }
 
 .text-overflow {
